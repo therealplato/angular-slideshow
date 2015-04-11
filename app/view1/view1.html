@@ -1,1 +1,20 @@
-<p>This is the partial for view 1.</p>
+<div
+  id="slidesContainer"
+  layout-fill
+>
+  <div
+    id='primaryImage'
+    style="background-image: url({{primaryImageUrl}})"
+    layout-fill
+    md-swipe-left="prevImg()"
+    md-swipe-right="nextImg()"
+  >Hi</div>
+  <div
+    id="zoneClickPrev"
+    ng-click="prevImg()"
+  > </div>
+  <div
+    id="zoneClickNext"
+    ng-click="nextImg()"
+  > </div>
+</div>

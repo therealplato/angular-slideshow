@@ -1,0 +1,27 @@
+#slidesContainer{
+  position: relative;
+  height: 100%;
+}
+#primaryImage {
+  /*height: 100%;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#zoneClickPrev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#zoneClickNext {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+}
