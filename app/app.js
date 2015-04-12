@@ -1,13 +1,19 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('slideshowApp', [
   'ngRoute',
   'ngMaterial',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'slideshowApp.view1',
+  'slideshowApp.view2',
+  'slideshowApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+}])
+.controller('menuController', ['$scope', '$rootScope', function($scope, $rootScope){
+  $scope.shuffle = false;
+  $scope.broadcastShuffle = function(){
+    $rootScope.$broadcast('shuffle', $scope.shuffle)
+  }
+}])

@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "angular-slideshow",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.1.0",
+  "description": "Simple slideshow with angular material",
+  "repository": "https://github.com/therealplato/angular-slideshow",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",

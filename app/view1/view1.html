@@ -1,20 +1,23 @@
+<span block>{{index}}</span>
 <div
   id="slidesContainer"
   layout-fill
+  md-swipe-left="nextImg()"
+  md-swipe-right="prevImg()"
 >
   <div
     id='primaryImage'
-    style="background-image: url({{primaryImageUrl}})"
+    style="background-image: url('{{primaryImageUrl}}'), url('components/loading.gif')"
     layout-fill
-    md-swipe-left="prevImg()"
-    md-swipe-right="nextImg()"
-  >Hi</div>
+  ></div>
   <div
     id="zoneClickPrev"
     ng-click="prevImg()"
+    md-swipe-right="prevImg()"
   > </div>
   <div
     id="zoneClickNext"
     ng-click="nextImg()"
+    md-swipe-left="nextImg()"
   > </div>
 </div>

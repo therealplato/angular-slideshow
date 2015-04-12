@@ -4,12 +4,12 @@
 }
 #primaryImage {
   /*height: 100%;*/
-  background-size: contain;
+  background-size: contain, auto;
   background-repeat: no-repeat;
   background-position: center;
 }
 #zoneClickPrev {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 20%;
@@ -18,10 +18,17 @@
 }
 
 #zoneClickNext {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 20%;
   height: 100%;
   cursor: pointer;
+}
+
+md-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
