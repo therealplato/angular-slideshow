@@ -6,7 +6,8 @@ angular.module('slideshowApp', [
   'ngMaterial',
   'slideshowApp.view1',
   'slideshowApp.view2',
-  'slideshowApp.version'
+  'slideshowApp.version',
+  'monospaced.mousewheel',
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});

@@ -11,6 +11,7 @@ angular.module('slideshowApp.view1', ['ngRoute', 'ngMaterial'])
   });
 }])
 .controller('View1Ctrl', ['$scope', '$rootScope', '$http', 'baseUrl', function($scope, $rootScope, $http, baseUrl) {
+  window.scrollTo(0,1);
   // imgs is an array of filenames, from baseUrl/folder.json, relative to baseUrl:
   $scope.imgs = [];
   // Index keeps track of the current position in the imgs array:
@@ -22,6 +23,13 @@ angular.module('slideshowApp.view1', ['ngRoute', 'ngMaterial'])
   $scope.shuffle = false;
   // primaryImageUrl is a string url, templated into CSS background-image: url()
   $scope.primaryImageUrl = "";
+  $scope.onScroll=function($event, $delta, $deltaX, $deltaY){
+    if($delta > 0){ //scroll up
+      $scope.prevImg();
+    } else if($delta < 0){
+      $scope.nextImg();
+    }
+  }
 
   // Get a list of images with an AJAX call:
   $scope.loadImages = function(){
