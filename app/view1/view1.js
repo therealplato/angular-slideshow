@@ -1,7 +1,7 @@
 'use strict';
 angular.module('slideshowApp.view1', ['ngRoute', 'ngMaterial'])
 // Slash terminated base URL for images and folder.json file:
-.constant('baseUrl', '/images/')
+.constant('baseUrl', '/image/')
 // Alternate absolute URI for different host or port (requires CORS headers on that server)
 //.constant('baseUrl', 'https://192.168.1.101:3333/images/')
 .config(['$routeProvider', function($routeProvider) {
@@ -35,7 +35,7 @@ angular.module('slideshowApp.view1', ['ngRoute', 'ngMaterial'])
   $scope.loadImages = function(){
     // Append a nonce, to make the URI unique and avoid hitting any cache:
     var nonce=new Date().valueOf();
-    $http.get(baseUrl+"folder.json?nonce="+nonce).success(function (data) {
+    $http.get("/folder.json?nonce="+nonce).success(function (data) {
       console.log(data);
       $rootScope.$broadcast('indexImages', data);
     });

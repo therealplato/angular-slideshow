@@ -5,8 +5,6 @@ angular.module('slideshowApp', [
   'ngRoute',
   'ngMaterial',
   'slideshowApp.view1',
-  'slideshowApp.view2',
-  'slideshowApp.version',
   'monospaced.mousewheel',
 ]).
 config(['$routeProvider', function($routeProvider) {
